@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WNXRSSV6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2WNXRSSV6P');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Thank You — Hiranandani Westgate</title>
+  <link rel="icon" type="image/png" href="./images/favicon.png" />
+
+  <!-- Paths are relative on purpose: this file works from the domain root
+       or from a subfolder (e.g. /Westagate3Dv6/) without any changes. -->
+  <style>
+    @font-face {
+      font-family: "Zona Pro";
+      src: url("./fonts/ZonaPro-Regular.woff2") format("woff2"),
+           url("./fonts/ZonaPro-Regular.woff") format("woff"),
+           url("./fonts/ZonaPro-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --sand: #fff3e9;
+      --brown: #901749;
+      --gold: #c5995b;
+      --text: #414042;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; margin: 0; }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      background: var(--sand);
+      color: var(--text);
+      font-family: "Zona Pro", "Helvetica Neue", Arial, sans-serif;
+      text-align: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 620px;
+      padding: 56px 40px 48px;
+      border: 1px solid var(--gold);
+      background: rgba(255, 255, 255, 0.55);
+      animation: rise 0.7s ease both;
+    }
+
+    .logo { height: 44px; width: auto; margin-bottom: 36px; }
+
+    .tick {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 28px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tick svg { width: 28px; height: 28px; stroke: var(--gold); }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--brown);
+    }
+
+    p { margin: 0 auto 12px; max-width: 440px; font-size: 17px; line-height: 1.6; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 34px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .btn:hover, .btn:focus-visible { background: var(--gold); color: #fff; outline: none; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { .card { animation: none; } }
+  </style>
+
+  <!-- Conversion tracking (Google Ads / Meta Pixel / GTM) goes here — this
+       page only loads after a lead has been saved successfully. -->
+</head>
+<body>
+  <main class="card">
+    <img class="logo" src="./images/logo-color.png" alt="Hiranandani Westgate" />
+
+    <div class="tick" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12.5l4.5 4.5L19 7.5" />
+      </svg>
+    </div>
+
+    <h1>Thank you for your enquiry</h1>
+    <p>We've received your details. Our team will get in touch with you shortly to share more about Hiranandani Westgate.</p>
+
+    <a class="btn" href="./">Back to Westgate</a>
+  </main>
+</body>
+</html>

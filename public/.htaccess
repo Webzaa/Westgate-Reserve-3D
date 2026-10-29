@@ -1,0 +1,35 @@
+#  - Apache SPA + static asset delivery
+
+Options -MultiViews
+RewriteEngine On
+RewriteBase //
+
+# Preserve real files and directories.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# React SPA fallback.
+RewriteRule ^ index.html [L]
+
+# Long cache for immutable Vite assets.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:js|css|woff2?|ttf|svg|png|jpe?g|webp|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Video: allow browser range requests and cache aggressively.
+  <FilesMatch "\.(?:mp4|webm|mov)$">
+    Header set Cache-Control "public, max-age=2592000"
+    Header set Accept-Ranges "bytes"
+  </FilesMatch>
+</IfModule>
+
+# Correct MIME types.
+<IfModule mod_mime.c>
+  AddType video/mp4 .mp4
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+</IfModule>
